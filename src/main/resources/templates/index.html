@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<!--    <link href="../static/css/bulma.min.css" th:href="@{/css/bulma.min.css}" rel="stylesheet" />-->
+<!--    <link href="../static/css/bulma-rtl.min.css" th:href="@{/css/bulma-rtl.min.css}" rel="stylesheet" />-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h1>Disney Characters</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr th:each="character: ${page.characters}">
+        <td th:text="${character.name}">Name</td>
+        <td><img th:src="${character.imageUrl}" width="100"></td>
+    </tr>
+    </tfoot>
+    </tr>
+    </tbody>
+</table>
+
+<nav th:if="${page.totalPages > 0}" class="pagination" role="navigation" aria-label="pagination">
+    <ul class="pagination-list">
+        <li th:each="pageNumber : ${pages}">
+            <a th:class="${pageNumber == currentPage ? 'pagination-link is-current' : 'pagination-link'}" aria-label="Goto page" th:href="@{/(page=${pageNumber})}" th:text=${pageNumber}>1</a>
+        </li>
+    </ul>
+</nav>
+
+</body>
+</html>
