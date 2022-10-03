@@ -40,4 +40,4 @@ jobs:
       with:
         context: .
         # relative path to the place where source code with Dockerfile is located
-        push: ${{ github.ref == 'refs/heads/main' }}
+        push: ${{ github.ref == 'refs/heads/master' }}
