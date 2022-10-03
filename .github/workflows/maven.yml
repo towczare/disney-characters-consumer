@@ -39,5 +39,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
+        tags: |
+            springheroku/disney:latest 
         # relative path to the place where source code with Dockerfile is located
         push: ${{ github.ref == 'refs/heads/master' }}
