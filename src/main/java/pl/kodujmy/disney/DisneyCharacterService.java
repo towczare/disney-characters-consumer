@@ -1,9 +1,7 @@
-package pl.sda.disney.Disney.Characters;
+package pl.kodujmy.disney;
 
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 

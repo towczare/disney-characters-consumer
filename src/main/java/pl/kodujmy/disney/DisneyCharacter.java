@@ -1,4 +1,4 @@
-package pl.sda.disney.Disney.Characters;
+package pl.kodujmy.disney;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

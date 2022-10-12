@@ -1,6 +1,5 @@
-package pl.sda.disney.Disney.Characters;
+package pl.kodujmy.disney;
 
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

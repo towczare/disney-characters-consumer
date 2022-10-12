@@ -1,4 +1,4 @@
-package pl.sda.disney.Disney.Characters;
+package pl.kodujmy.disney;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
