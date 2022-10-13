@@ -15,14 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: executing remote ssh commands using ssh key
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
-        script: docker-compose down && docker-compose pull && docker-compose up -d
     - uses: actions/checkout@v3
     - name: Set up JDK 17
       uses: actions/setup-java@v3
